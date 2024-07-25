@@ -1,6 +1,9 @@
-import { Route, Routes } from "react-router-dom";
-import { FE_ROUTES } from "../constants";
 import { Suspense, lazy } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import { CommonLayout } from "../layout";
+
+import { FE_ROUTES } from "../constants";
 
 const { BASE, LOGIN, SIGNUP } = FE_ROUTES;
 
@@ -20,9 +23,11 @@ const SignUpPage = Loadable(lazy(() => import("../pages/SignUp")));
 export const FoodieRoutes = () => {
   return (
     <Routes>
-      <Route path={BASE} element={<HomePage />} />
-      <Route path={LOGIN} element={<LogInPage />} />
-      <Route path={SIGNUP} element={<SignUpPage />} />
+      <Route element={<CommonLayout />}>
+        <Route path={BASE} element={<HomePage />} />
+        <Route path={LOGIN} element={<LogInPage />} />
+        <Route path={SIGNUP} element={<SignUpPage />} />
+      </Route>
     </Routes>
   );
 };
