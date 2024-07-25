@@ -1,8 +1,10 @@
 import { QueryClient, QueryClientProvider } from "react-query";
-import "./App.css";
-import { FoodieRoutes } from "./routes/foodieRoutes";
 import { BrowserRouter } from "react-router-dom";
-import { AppLayout } from "./layout";
+
+import { FoodieRoutes } from "@/routes/foodieRoutes";
+import { AppLayout } from "@/layout";
+
+import "./App.css";
 
 const queryClient = new QueryClient();
 

@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import classes from "./AppLayout.module.scss";
+import classes from "@/layout/AppLayout.module.scss";
 
 type Props = {
   children: ReactNode;
