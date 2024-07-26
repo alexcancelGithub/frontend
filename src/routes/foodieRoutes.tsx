@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import { CommonLayout } from "../layout";
+import { CommonLayout } from "@/layout";
 
-import { FE_ROUTES } from "../constants";
+import { FE_ROUTES } from "@/constants";
 
 const { BASE, LOGIN, SIGNUP } = FE_ROUTES;
 
